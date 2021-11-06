@@ -11,6 +11,10 @@ function displayMovie(name) {
   document.querySelector("#fav-movie").innerText = 'Favourite movie is:' + name;
 }
 
+function changeColour(colour) {
+  document.body.style.background = colour;
+}
+
 /*
   Define processUserInput function which prompts the user
   and invokes the callback with the input
@@ -25,6 +29,7 @@ function processUserInput(text, callback) {
 const logButton = document.querySelector('#log-button')
 const alertButton = document.querySelector('#alert-button')
 const displayButton = document.querySelector('#display-button')
+const colourButton = document.querySelector('#color-button')
 
 /* 
   Define event listeners for buttons which invoke 
@@ -42,3 +47,8 @@ alertButton.addEventListener('click', () => {
 displayButton.addEventListener('click', () => {
   processUserInput("Please enter your favourite movie", displayMovie)
 })
+
+colourButton.addEventListener('click', () => {
+  processUserInput("Please enter your favourite colour", changeColour)
+})
+
