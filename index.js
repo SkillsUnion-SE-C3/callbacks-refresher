@@ -11,6 +11,10 @@ function displayMovie(name) {
   document.querySelector("#fav-movie").innerText = 'Favourite movie is:' + name;
 }
 
+function colorBody(color) {
+  document.body.style.backgroundColor = color;
+}
+
 /*
   Define processUserInput function which prompts the user
   and invokes the callback with the input
@@ -26,6 +30,7 @@ const logButton = document.querySelector('#log-button')
 const alertButton = document.querySelector('#alert-button')
 const displayButton = document.querySelector('#display-button')
 
+const colorButton = document.querySelector('#color-button')
 /* 
   Define event listeners for buttons which invoke 
   processUserInput with appropriate callback
@@ -42,3 +47,14 @@ alertButton.addEventListener('click', () => {
 displayButton.addEventListener('click', () => {
   processUserInput("Please enter your favourite movie", displayMovie)
 })
+
+colorButton.addEventListener('click', () => {
+  processUserInput("Please enter your favourite colour", colorBody)
+})
+
+// DOM the colour button
+// Check the background colour is the body
+// DOM the background if you need to
+// Event listener on the colour button to bring up prompt
+      // Callback function in the event listener to transfer the value from the prompt into the style/background/body (whatever the body is named)
+//  
