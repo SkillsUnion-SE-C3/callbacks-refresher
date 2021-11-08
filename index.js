@@ -51,3 +51,4 @@ displayButton.addEventListener('click', () => {
 colorButton.addEventListener('click', () => {
   processUserInput("Please enter a background colour", backgroundColor)
 })
+
