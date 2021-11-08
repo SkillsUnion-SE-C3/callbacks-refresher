@@ -16,7 +16,7 @@ function displayColor(color) {
 }
 /*
   Define processUserInput function which prompts the user
-  and invokes the callback with the input
+  and invokes the callback with the input.
 */
 
 function processUserInput(text, callback) {
