@@ -10,6 +10,9 @@ function alertAge(age) {
 function displayMovie(name) {
   document.querySelector("#fav-movie").innerText = 'Favourite movie is:' + name;
 }
+function displayColour(colour){
+  document.querySelector("body").style.backgroundColor = colour;
+}
 
 /*
   Define processUserInput function which prompts the user
@@ -25,6 +28,7 @@ function processUserInput(text, callback) {
 const logButton = document.querySelector('#log-button')
 const alertButton = document.querySelector('#alert-button')
 const displayButton = document.querySelector('#display-button')
+const colourButton = document.querySelector('#color-button')
 
 /* 
   Define event listeners for buttons which invoke 
@@ -41,4 +45,7 @@ alertButton.addEventListener('click', () => {
 
 displayButton.addEventListener('click', () => {
   processUserInput("Please enter your favourite movie", displayMovie)
+})
+colourButton.addEventListener('click', () => {
+  processUserInput("Please enter your desired background colour", displayColour)
 })
